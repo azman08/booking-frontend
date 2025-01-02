@@ -22,7 +22,7 @@ export default function BookingForm() {
       const formattedDate = selectedDate.toISOString().split("T")[0];
       try {
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings?date=${formattedDate}`
+          `https://booking-backend-1-3qeh.onrender.com/api/bookings?date=${formattedDate}`
         );
         const allSlots = [
           "09:00",
@@ -61,7 +61,7 @@ export default function BookingForm() {
 
     try {
       await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings`,
+        `https://booking-backend-1-3qeh.onrender.com/api/bookings`,
         bookingData
       );
 
